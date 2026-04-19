@@ -50,6 +50,40 @@ export const tools: Tool[] = [
     description: "Convert colors between HEX, RGB, and HSL formats.",
     category: "Converters",
   },
+  {
+    name: "Timestamp Converter",
+    slug: "timestamp-converter",
+    description: "Convert between Unix timestamps and human-readable dates.",
+    category: "Converters",
+  },
+  {
+    name: "Regex Tester",
+    slug: "regex-tester",
+    description:
+      "Test regular expressions with live matching and highlight results.",
+    category: "Testers",
+  },
+  {
+    name: "JWT Decoder",
+    slug: "jwt-decoder",
+    description:
+      "Decode JSON Web Tokens to inspect header, payload, and expiry.",
+    category: "Decoders",
+  },
+  {
+    name: "Markdown Preview",
+    slug: "markdown-preview",
+    description:
+      "Write Markdown and see a live HTML preview side by side.",
+    category: "Formatters",
+  },
+  {
+    name: "Diff Checker",
+    slug: "diff-checker",
+    description:
+      "Compare two texts and highlight the differences line by line.",
+    category: "Testers",
+  },
 ];
 
 export const siteConfig = {

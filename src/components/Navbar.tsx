@@ -12,8 +12,11 @@ export default function Navbar() {
           <Link href="/" className="hover:text-foreground transition-colors">
             Tools
           </Link>
+          <Link href="/blog" className="hover:text-foreground transition-colors">
+            Blog
+          </Link>
           <a
-            href="https://github.com"
+            href="https://github.com/Sahilsaw/devtools-site"
             target="_blank"
             rel="noopener noreferrer"
             className="hover:text-foreground transition-colors"
