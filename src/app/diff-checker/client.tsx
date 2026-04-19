@@ -95,8 +95,8 @@ export default function DiffClient() {
       {diff.length > 0 && (
         <>
           <div className="flex gap-4 text-sm">
-            <span className="text-green-700 font-medium">+{stats.added} added</span>
-            <span className="text-red-700 font-medium">-{stats.removed} removed</span>
+            <span className="text-success-text font-medium">+{stats.added} added</span>
+            <span className="text-error-text font-medium">-{stats.removed} removed</span>
             <span className="text-muted">{stats.same} unchanged</span>
           </div>
 
@@ -107,9 +107,9 @@ export default function DiffClient() {
                   key={i}
                   className={`flex font-mono text-sm border-b border-card-border last:border-0 ${
                     line.type === "added"
-                      ? "bg-green-50"
+                      ? "bg-success-bg"
                       : line.type === "removed"
-                        ? "bg-red-50"
+                        ? "bg-error-bg"
                         : "bg-card"
                   }`}
                 >
@@ -122,9 +122,9 @@ export default function DiffClient() {
                   <span
                     className={`w-6 text-center py-1 select-none shrink-0 font-bold ${
                       line.type === "added"
-                        ? "text-green-600"
+                        ? "text-success-text"
                         : line.type === "removed"
-                          ? "text-red-600"
+                          ? "text-error-text"
                           : "text-transparent"
                     }`}
                   >

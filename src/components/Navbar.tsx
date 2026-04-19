@@ -1,5 +1,6 @@
 import Link from "next/link";
 import { siteConfig } from "@/lib/tools";
+import ThemeToggle from "./ThemeToggle";
 
 export default function Navbar() {
   return (
@@ -16,13 +17,14 @@ export default function Navbar() {
             Blog
           </Link>
           <a
-            href="https://github.com/Sahilsaw/devtools-site"
+            href="https://github.com/Sahilsaw"
             target="_blank"
             rel="noopener noreferrer"
             className="hover:text-foreground transition-colors"
           >
             GitHub
           </a>
+          <ThemeToggle />
         </div>
       </nav>
     </header>

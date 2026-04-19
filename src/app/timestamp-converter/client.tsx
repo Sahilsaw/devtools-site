@@ -84,7 +84,7 @@ export default function TimestampClient() {
             </div>
           )}
           {timestamp && !convertedDate && (
-            <div className="p-3 bg-red-50 text-red-700 rounded-lg text-sm border border-red-200">Invalid timestamp</div>
+            <div className="p-3 bg-error-bg text-error-text rounded-lg text-sm border border-error-border">Invalid timestamp</div>
           )}
         </div>
 

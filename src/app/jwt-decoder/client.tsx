@@ -66,7 +66,7 @@ export default function JwtClient() {
       />
 
       {isInvalid && (
-        <div className="p-3 bg-red-50 text-red-700 rounded-lg text-sm border border-red-200">
+        <div className="p-3 bg-error-bg text-error-text rounded-lg text-sm border border-error-border">
           Invalid JWT format. A JWT must have three parts separated by dots (header.payload.signature).
         </div>
       )}
@@ -77,8 +77,8 @@ export default function JwtClient() {
             <div
               className={`p-3 rounded-lg text-sm border ${
                 decoded.isExpired
-                  ? "bg-red-50 text-red-700 border-red-200"
-                  : "bg-green-50 text-green-700 border-green-200"
+                  ? "bg-error-bg text-error-text border-error-border"
+                  : "bg-success-bg text-success-text border-success-border"
               }`}
             >
               {decoded.isExpired
@@ -88,8 +88,8 @@ export default function JwtClient() {
           )}
 
           {[
-            { label: "Header", data: decoded.header, color: "text-red-600" },
-            { label: "Payload", data: decoded.payload, color: "text-purple-600" },
+            { label: "Header", data: decoded.header, color: "text-error-text" },
+            { label: "Payload", data: decoded.payload, color: "text-primary" },
           ].map(({ label, data, color }) => (
             <div key={label} className="border border-card-border rounded-lg bg-card">
               <div className="flex items-center justify-between px-4 py-2 border-b border-card-border">
@@ -117,7 +117,7 @@ export default function JwtClient() {
 
           <div className="border border-card-border rounded-lg bg-card">
             <div className="px-4 py-2 border-b border-card-border">
-              <span className="text-sm font-semibold text-blue-600">Signature</span>
+              <span className="text-sm font-semibold text-primary">Signature</span>
             </div>
             <div className="p-4 font-mono text-xs text-muted break-all bg-accent">
               {decoded.signature}

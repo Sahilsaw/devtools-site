@@ -29,7 +29,7 @@ export default function RegexClient() {
       let lastIndex = 0;
       for (const match of matches) {
         highlighted += escapeHtml(testString.slice(lastIndex, match.index));
-        highlighted += `<mark class="bg-yellow-200 text-yellow-900 rounded px-0.5">${escapeHtml(match.match)}</mark>`;
+        highlighted += `<mark class="bg-highlight-bg text-highlight-text rounded px-0.5">${escapeHtml(match.match)}</mark>`;
         lastIndex = match.index + match.match.length;
       }
       highlighted += escapeHtml(testString.slice(lastIndex));
@@ -106,7 +106,7 @@ export default function RegexClient() {
       </div>
 
       {result?.error && (
-        <div className="p-3 bg-red-50 text-red-700 rounded-lg text-sm border border-red-200">
+        <div className="p-3 bg-error-bg text-error-text rounded-lg text-sm border border-error-border">
           {result.error}
         </div>
       )}

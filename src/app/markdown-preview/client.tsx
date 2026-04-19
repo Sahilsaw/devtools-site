@@ -7,17 +7,17 @@ function parseMarkdown(md: string): string {
 
   // Code blocks (``` ... ```)
   html = html.replace(/```(\w*)\n([\s\S]*?)```/g, (_m, _lang, code) =>
-    `<pre class="bg-gray-100 rounded p-3 overflow-auto text-sm my-2"><code>${escapeHtml(code.trim())}</code></pre>`
+    `<pre class="bg-code-bg rounded p-3 overflow-auto text-sm my-2"><code>${escapeHtml(code.trim())}</code></pre>`
   );
 
   // Inline code
-  html = html.replace(/`([^`]+)`/g, '<code class="bg-gray-100 px-1.5 py-0.5 rounded text-sm font-mono">$1</code>');
+  html = html.replace(/`([^`]+)`/g, '<code class="bg-code-bg px-1.5 py-0.5 rounded text-sm font-mono">$1</code>');
 
   // Images (before links)
   html = html.replace(/!\[([^\]]*)\]\(([^)]+)\)/g, '<img src="$2" alt="$1" class="max-w-full rounded my-2" />');
 
   // Links
-  html = html.replace(/\[([^\]]+)\]\(([^)]+)\)/g, '<a href="$2" class="text-blue-600 underline" target="_blank" rel="noopener">$1</a>');
+  html = html.replace(/\[([^\]]+)\]\(([^)]+)\)/g, '<a href="$2" class="text-primary underline" target="_blank" rel="noopener">$1</a>');
 
   // Headings
   html = html.replace(/^######\s+(.+)$/gm, '<h6 class="text-sm font-bold mt-4 mb-1">$1</h6>');
@@ -36,10 +36,10 @@ function parseMarkdown(md: string): string {
   html = html.replace(/~~(.+?)~~/g, "<del>$1</del>");
 
   // Blockquotes
-  html = html.replace(/^>\s+(.+)$/gm, '<blockquote class="border-l-4 border-gray-300 pl-4 italic text-gray-600 my-2">$1</blockquote>');
+  html = html.replace(/^>\s+(.+)$/gm, '<blockquote class="border-l-4 border-card-border pl-4 italic text-muted my-2">$1</blockquote>');
 
   // Horizontal rule
-  html = html.replace(/^---$/gm, '<hr class="border-t border-gray-300 my-4" />');
+  html = html.replace(/^---$/gm, '<hr class="border-t border-card-border my-4" />');
 
   // Unordered lists
   html = html.replace(/^[-*]\s+(.+)$/gm, '<li class="ml-4 list-disc">$1</li>');
@@ -134,7 +134,7 @@ export default function MarkdownClient() {
             </button>
           </div>
           <div
-            className="w-full h-[400px] p-4 border border-card-border rounded-lg bg-white overflow-auto text-sm leading-relaxed"
+            className="w-full h-[400px] p-4 border border-card-border rounded-lg bg-card overflow-auto text-sm leading-relaxed"
             dangerouslySetInnerHTML={{ __html: html }}
           />
         </div>
