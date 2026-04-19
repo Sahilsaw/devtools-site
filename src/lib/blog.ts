@@ -35,4 +35,22 @@ export const blogPosts: BlogPost[] = [
     readTime: "7 min read",
     keywords: ["sha256 vs md5", "hash algorithm comparison", "md5 vs sha256", "which hash to use"],
   },
+  {
+    slug: "how-to-merge-pdf-files",
+    title: "How to Merge PDF Files — The Complete Guide",
+    description:
+      "Learn how to combine multiple PDF files into one document. Covers free tools, command-line methods, and programming approaches.",
+    date: "2026-04-20",
+    readTime: "6 min read",
+    keywords: ["merge pdf", "combine pdf files", "join pdf", "how to merge pdf"],
+  },
+  {
+    slug: "image-to-pdf-conversion-guide",
+    title: "How to Convert Images to PDF — JPG, PNG, and More",
+    description:
+      "A complete guide to converting images to PDF. Learn about different methods, quality considerations, and the best free tools.",
+    date: "2026-04-20",
+    readTime: "5 min read",
+    keywords: ["image to pdf", "jpg to pdf", "convert image to pdf", "photo to pdf"],
+  },
 ];

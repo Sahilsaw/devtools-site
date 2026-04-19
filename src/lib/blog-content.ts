@@ -171,4 +171,108 @@ export const blogContent: Record<string, BlogSection[]> = {
       ],
     },
   ],
+
+  "how-to-merge-pdf-files": [
+    {
+      paragraphs: [
+        "Merging PDF files is one of the most common document tasks in both personal and professional settings. Whether you're combining invoices for accounting, assembling a report from multiple contributors, or putting together an application package, knowing how to merge PDFs efficiently saves significant time. This guide covers every method available.",
+      ],
+    },
+    {
+      heading: "Why Merge PDF Files?",
+      paragraphs: [
+        "There are countless scenarios where combining PDFs makes sense. Businesses regularly merge invoices, receipts, and financial statements for record-keeping. Students combine research papers, notes, and references into study packages. Job applicants merge resumes, cover letters, and portfolios into single application documents.",
+        "Having a single file instead of multiple PDFs makes sharing easier (one attachment instead of many), keeps documents organized, ensures pages stay in the correct order, and reduces the chance of recipients missing an important document in a batch of attachments.",
+      ],
+    },
+    {
+      heading: "Method 1: Online Browser-Based Tools (Fastest)",
+      paragraphs: [
+        "The fastest way to merge PDFs is using a browser-based tool like our free Merge PDF tool. Simply upload your files, arrange them in the desired order, and click merge. The combined file downloads in seconds.",
+        "The key advantage of browser-based tools is privacy — tools that process files client-side (in your browser) never upload your documents to a server. This makes them safe for confidential documents. Look for tools that explicitly state 'processed in your browser' or 'no server upload.'",
+        "Server-based tools like iLovePDF and SmallPDF upload your files for processing. While convenient, this means your documents pass through third-party servers — not ideal for sensitive files like contracts, medical records, or financial documents.",
+      ],
+    },
+    {
+      heading: "Method 2: Command-Line Tools",
+      paragraphs: [
+        "For developers and power users, command-line tools offer the most flexibility. PDFtk (PDF Toolkit) is the classic choice: 'pdftk file1.pdf file2.pdf cat output merged.pdf'. It's available on Linux, macOS (via Homebrew), and Windows.",
+        "Ghostscript is another option: 'gs -dBATCH -dNOPAUSE -q -sDEVICE=pdfwrite -sOutputFile=merged.pdf file1.pdf file2.pdf'. It's more powerful than PDFtk and can also handle compression and format conversion.",
+        "On macOS, you can use the built-in Python script: '/System/Library/Automator/Combine\\ PDF\\ Pages.action/Contents/MacOS/join --output merged.pdf file1.pdf file2.pdf'. No additional installation required.",
+      ],
+    },
+    {
+      heading: "Method 3: Programming Libraries",
+      paragraphs: [
+        "For automated workflows, use programming libraries. In JavaScript/Node.js, pdf-lib is the go-to choice — it's the same library powering our online tool. In Python, PyPDF2 or pypdf handle merging with just a few lines of code. Java developers can use Apache PDFBox.",
+        "Programmatic merging is ideal when you need to merge PDFs as part of a larger workflow — generating reports, processing form submissions, or building document management systems. Most libraries support not just merging but also splitting, rotating, and adding watermarks.",
+      ],
+    },
+    {
+      heading: "Tips for Better PDF Merging",
+      paragraphs: [
+        "Always check page orientation before merging. Mixing portrait and landscape pages in one document can be confusing. Use a rotate tool to standardize orientation first.",
+        "Consider file size. If you're merging many large PDFs (each with high-resolution images), the output can become very large. For email-friendly sizes, consider compressing images before merging or using a PDF compression tool afterward.",
+        "Verify the merged output. Always open the merged PDF and scroll through it to ensure all pages are present, in the correct order, and properly oriented. It's much easier to fix issues right away than after distributing the document.",
+      ],
+    },
+    {
+      heading: "Try It Now",
+      paragraphs: [
+        "Ready to merge some PDFs? Try our free Merge PDF tool — it runs entirely in your browser, supports unlimited files, and keeps your documents completely private. No signup, no email, no file size limits.",
+      ],
+    },
+  ],
+
+  "image-to-pdf-conversion-guide": [
+    {
+      paragraphs: [
+        "Converting images to PDF is something almost everyone needs to do at some point — whether you're scanning documents with your phone, creating a photo portfolio, digitizing receipts, or submitting required documents for an application. This guide covers everything you need to know about image-to-PDF conversion.",
+      ],
+    },
+    {
+      heading: "Why Convert Images to PDF?",
+      paragraphs: [
+        "PDF (Portable Document Format) is the universal standard for sharing documents. Converting images to PDF has several advantages: PDFs maintain consistent formatting across all devices, they can be password-protected, they support multiple pages in a single file, they're the accepted format for official submissions, and they're easier to print with correct sizing.",
+        "Common scenarios include converting phone camera scans of documents, creating portfolios or lookbooks from individual images, assembling scanned receipts for expense reports, digitizing physical photos into shareable albums, and preparing images for official submissions (visa applications, insurance claims, etc.).",
+      ],
+    },
+    {
+      heading: "Image Formats: JPG vs PNG vs WebP",
+      paragraphs: [
+        "JPEG (JPG) is the most common image format, using lossy compression. It's ideal for photographs and complex images. When embedded in a PDF, JPEG images maintain their compressed size, keeping the PDF file relatively small.",
+        "PNG uses lossless compression and supports transparency. It's better for screenshots, diagrams, and images with text. PNG files are typically larger than JPEG, so PDFs with many PNG images will be bigger.",
+        "WebP is Google's modern image format that offers both lossy and lossless compression with smaller file sizes than JPEG and PNG. Most modern conversion tools (including ours) support WebP by converting it to PNG before embedding in the PDF.",
+      ],
+    },
+    {
+      heading: "Page Size: A4 vs Custom",
+      paragraphs: [
+        "When converting images to PDF, you need to decide on page sizing. A4 (210 x 297 mm or 8.27 x 11.69 inches) is the international standard paper size. Using A4 pages ensures your PDF prints correctly on standard printers worldwide and looks professional.",
+        "Custom or 'match image size' mode creates pages that exactly match each image's dimensions. This is better for digital distribution where you want to preserve the original resolution without any white borders. It's also useful when creating PDFs from images with different aspect ratios.",
+        "For most document-like use cases (scanned papers, receipts, forms), A4 is the right choice. For portfolios, photography, and digital sharing, matching the image size usually looks better.",
+      ],
+    },
+    {
+      heading: "Quality Considerations",
+      paragraphs: [
+        "The best conversion tools embed images without additional compression — what goes in is exactly what comes out. This is called 'lossless embedding' and it means your PDF images look identical to the originals.",
+        "Be wary of tools that re-compress images during conversion. Some online tools reduce image quality to decrease the output file size, which can make text blurry and photos look degraded. Our tool embeds images at their original quality without re-compression.",
+        "If your output PDF is too large, it's better to optimize the source images before conversion (resize them or reduce JPEG quality) rather than relying on the converter to compress them. This gives you control over the quality trade-off.",
+      ],
+    },
+    {
+      heading: "Privacy and Security",
+      paragraphs: [
+        "Many online image-to-PDF converters upload your files to their servers for processing. This means your personal documents — ID scans, medical records, financial documents — pass through third-party infrastructure. Always check whether a tool processes files locally in your browser or uploads them.",
+        "Our Image to PDF tool processes everything client-side. Your images never leave your device, are never stored on any server, and are never accessible to anyone else. For sensitive documents, this client-side approach is the safest option available.",
+      ],
+    },
+    {
+      heading: "Try It Now",
+      paragraphs: [
+        "Ready to convert your images? Try our free Image to PDF converter — upload JPG, PNG, or WebP images, arrange them in order, choose your page size, and download the PDF. Everything runs in your browser for maximum privacy.",
+      ],
+    },
+  ],
 };

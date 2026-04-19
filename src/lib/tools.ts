@@ -84,6 +84,48 @@ export const tools: Tool[] = [
       "Compare two texts and highlight the differences line by line.",
     category: "Testers",
   },
+  {
+    name: "Merge PDFs",
+    slug: "merge-pdf",
+    description:
+      "Combine multiple PDF files into a single document. Reorder pages easily.",
+    category: "PDF Tools",
+  },
+  {
+    name: "Split PDF",
+    slug: "split-pdf",
+    description:
+      "Extract specific pages or split a PDF into separate files.",
+    category: "PDF Tools",
+  },
+  {
+    name: "Rotate PDF",
+    slug: "rotate-pdf",
+    description:
+      "Rotate all or specific pages of a PDF by 90, 180, or 270 degrees.",
+    category: "PDF Tools",
+  },
+  {
+    name: "Add Page Numbers",
+    slug: "pdf-page-numbers",
+    description:
+      "Add page numbers to any PDF with customizable position and format.",
+    category: "PDF Tools",
+  },
+  {
+    name: "Add Watermark",
+    slug: "pdf-watermark",
+    description:
+      "Add a text watermark to every page of your PDF document.",
+    category: "PDF Tools",
+  },
+  {
+    name: "Image to PDF",
+    slug: "image-to-pdf",
+    description:
+      "Convert JPG, PNG, or WebP images into a PDF document.",
+    category: "PDF Tools",
+  },
 ];
 
 export const siteConfig = {
